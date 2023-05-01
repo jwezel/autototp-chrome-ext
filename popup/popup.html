@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="popup.js"></script>
+    <style>
+      body {
+        overflow: hidden;
+        margin: 2px;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+      }
+      .menu-item {
+        display: flex;
+        flex: 1;
+        white-space: nowrap;
+        margin: 1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu">
+      <button id="clearUrl" class="menu-item">Clear server URL</button>
+      <button id="clearToken" class="menu-item">Clear token</button>
+    </div>
+  </body>
+</html>
