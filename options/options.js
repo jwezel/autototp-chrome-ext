@@ -1,6 +1,5 @@
 // Saves options to chrome.storage
 const saveOptions = () => {
-  console.log('saveOptions()');
   const server_url = document.getElementById('server_url').value;
   const server_token = document.getElementById('server_token').value;
   chrome.storage.sync.set(
@@ -22,7 +21,6 @@ const restoreOptions = () => {
   chrome.storage.sync.get(
     {server_url: 'https://', server_token: ''},
     (items) => {
-      console.log('restoreOptions()');
       document.getElementById('server_url').value = items.server_url;
       document.getElementById('server_token').value = items.server_token;
     }
@@ -31,4 +29,3 @@ const restoreOptions = () => {
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
 document.getElementById('save_button').addEventListener('click', saveOptions);
-console.log('options.js loaded');
